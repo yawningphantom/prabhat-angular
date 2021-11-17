@@ -1,0 +1,42 @@
+<div class="navbar">
+	<mat-toolbar class="mat-elevation-z8 colo">
+		<span>{{title}}</span>
+		<div class="spacer"></div>
+		<div>
+			<div class="bigbx">
+				<a mat-button class="smallbox">COURSES </a>
+				<a mat-button class="smallbox">My WISHLIST </a>
+				<a mat-button class="smallbox">
+					<mat-icon>account_circle</mat-icon>
+				</a>
+				<a mat-raised-button class="smallbox">
+					<mat-icon>shopping_cart</mat-icon>
+				</a>
+			</div>
+		</div>
+
+	</mat-toolbar>
+
+	<br>
+	<div>
+		<mat-toolbar class="mat-elevation-z8 dashbox colo2">
+			<div>
+				<span class="discover">
+					Discover Latest Courses on React
+				</span>
+			</div>
+			<div class="react">
+				<img src="https://daviseford.com/blog/public/img/thumbnails/misc/react-logo.png" mat-card-avatar />
+			</div>
+
+		</mat-toolbar>
+	</div>
+	<div>
+		<!-- <div><span>All Courses</span></div> -->
+		<div layout="row" layout-align="start center" flex>
+			<app-tablecommponent [course]="appData.courseList" [cart]="appData.cart"></app-tablecommponent>
+			<span flex></span>
+		</div>
+	</div>
+
+</div>

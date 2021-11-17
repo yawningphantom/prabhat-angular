@@ -1,0 +1,42 @@
+<div class="card-wrapper">
+  <mat-grid-list cols="4">
+    <mat-grid-tile colspan="3">
+
+      <app-course-list [courses]="courses" [(cart)]="cart"></app-course-list>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>
+            YOUR CART DETAILS
+            <mat-divider></mat-divider>
+          </mat-card-title>
+          <mat-card-subtitle>
+           {{
+             cart.items.length > 0 ?
+             "":
+             "your cart is empty" 
+           }}
+            
+          </mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content *ngFor="let course of cart.items;">
+          {{ course.title}}
+        </mat-card-content>
+
+        <mat-card-footer layout="col" layout-align="center center">
+          <mat-divider></mat-divider>
+          <div layout-align="center center">Total Cart Value <br /> <b>
+              Rs/ {{ cart.total}}
+            </b>
+          </div>
+
+        </mat-card-footer>
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+
+</div>

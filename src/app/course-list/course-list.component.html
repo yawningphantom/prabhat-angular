@@ -1,0 +1,86 @@
+<mat-list class="coursebox" layout="flex">
+	<mat-list-item>
+		<div style="display: flex;flex-direction: column;">
+			<mat-card class="example-card" *ngFor="let course of courses;">
+				<div layout="row" layout-align="center" style="display: flex;flex-direction: row;">
+					<div>
+						<mat-card-header>
+							<img src="https://clipartart.com/images/facebook-profile-icon-clipart-7.png"
+								mat-card-avatar />
+							<mat-card-title>{{course.title}}</mat-card-title>
+							<mat-card-subtitle>
+								{{course.desc}}
+							</mat-card-subtitle>
+						</mat-card-header>
+						<mat-card-content>
+							<mat-card-actions>
+
+								<button mat-raised-button color="accent">LIKE</button>
+								<button mat-raised-button color="primary">SHARE</button>
+							</mat-card-actions>
+						</mat-card-content>
+					</div>
+					<div>
+						{{course.author}}
+					</div>
+					<div class="example-button-container">
+						<button mat-fab disabled aria-label="Example icon button with a heart icon">
+							<mat-icon>favorite</mat-icon>
+						</button>
+						<b> Rs {{course.discountedPrice}}</b>
+						<del> Rs {{course.actualPrice}}</del>
+
+					</div>
+					<div class="example-button-container">
+						<button 
+							mat-button 
+							color="primary"
+							(click)="updateCart(course)"
+							>Add to Cart
+						</button>
+					</div>
+				</div>
+			</mat-card>
+		</div>
+
+	</mat-list-item>
+	<!-- <mat-list-item>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <img src="https://clipartart.com/images/facebook-profile-icon-clipart-7.png" mat-card-avatar />
+          <mat-card-title>FreakyJolly.com</mat-card-title>
+          <mat-card-subtitle>
+            Learn Web Development with Easy Tutorials
+          </mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-raised-button color="accent">LIKE</button>
+          <button mat-raised-button color="primary">SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-list-item>
+    <br>
+    <mat-list-item>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <img src="https://clipartart.com/images/facebook-profile-icon-clipart-7.png" mat-card-avatar />
+          <mat-card-title>FreakyJolly.com</mat-card-title>
+          <mat-card-subtitle>
+            Learn Web Development with Easy Tutorials
+          </mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-raised-button color="accent">LIKE</button>
+          <button mat-raised-button color="primary">SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-list-item> -->
+</mat-list>
